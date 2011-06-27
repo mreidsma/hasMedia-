@@ -1,0 +1,36 @@
+#README - hasMedia? Script
+
+---
+
+This tool was developed by Matthew Reidsma in Javascript to display streaming video in CONTENTdm 6.
+
+INSTALLATION
+
+Open hasMedia.js in your favorite text editor and edit the path variable to the path to your CONTENTdm media, and the flashpath variable to the path to your streaming Flash player. That's it! 
+
+Follow the directions on the CONTENTdm website for adding scripts: http://www.contentdm.org/help6/custom/configure11.asp
+
+EXAMPLE:
+
+This tool assumes that you have your media stored in folders named after collections, with the filenames matching the Digital Identifier field. For HTML5 support, you will also need to provide mp4, ogv, and Flash versions of the movies, as wel as a .jpg for the poster. For audio, it assumes .mp3 and .ogg versions for full browser support.
+
+For example, a streaming video for a record in the collection p15035coll11 with a Digital Identifier of ARoberts would have the following files:
+
+* /PATH/TO/CDM/MEDIA/p15035coll11/ARoberts.mp4 - An mp4 for Webkit browsers.
+* /PATH/TO/CDM/MEDIA/p15035coll11/ARoberts.ogv - An Ogg Video for Gecko Browsers
+* /PATH/TO/CDM/MEDIA/p15035coll11/ARoberts.flv - Flash for non-HTML5 browsers
+* /PATH/TO/CDM/MEDIA/p15035coll11/ARoberts.jpg - The poster image to display until the video is played
+
+The script then checks metadata on each single item page for the Type field and whether it contains the phrase "Moving Image" or . If so, it creates the collection variable (in the above example, p15035coll11) as well as the Digital Identifier variable (recordno in the script). It then constructs an HTML5 video or audio block that first serves mp4/mp3 for Webkit browsers, then serves OGG video/OGG audio for Gecko browsers, and finally offers a Flash variant for non-HTML browsers. (It also offers a direct download of the mp4/mp3 for those without HTML5 support or Flash.)
+
+More questions? Feel free to contact Matthew Reidsma on Twitter at @mreidsma or via email at reidsmam@gvsu.edu.
+
+COPYRIGHT
+
+This tool is copyright 2011 Grand Valley State University Libraries. 
+
+This tool is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This tool is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this tool. If not, see <http://www.gnu.org/licenses/>.
