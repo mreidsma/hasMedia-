@@ -14,7 +14,7 @@ var hasAudio = "Sound";
 var path = "PATH/TO/CDM/MEDIA"; // Path to your collections folders
 var flashpath = "PATH/TO/FLASH/PLAYER"; // Path to Flash streaming media swf
 var collection = $("input#cdm_collection").val(); // CDM Collection ID
-var recordno = $("td.description_col1:contains('Digital Identifier')").next().text(); // Digital Identifier #
+var recordno = $("td.description_col1:contains('Digital Identification')").next().text(); // Digital Identifier #
 
 // Trim white space from  variables
 
